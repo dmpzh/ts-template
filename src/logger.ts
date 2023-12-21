@@ -1,8 +1,8 @@
-import chalk, { Chalk } from 'chalk';
+import chalk, { ChalkInstance } from 'chalk';
 import path from 'path';
 
 export class Logger {
-	private static writeMessage(msg: string, color: Chalk) {
+	private static writeMessage(msg: string, color: ChalkInstance) {
 		const pst = Error.prepareStackTrace;
 		Error.prepareStackTrace = function (err, stack) {
 			return stack;
